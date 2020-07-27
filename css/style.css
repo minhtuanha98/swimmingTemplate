@@ -1,0 +1,593 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+/* smart phone */
+@media screen and (min-width: 240px){
+    header{
+        background-color:#ffffff;
+    }
+    nav img{
+        max-width: 30%;
+        height: auto;
+        padding: 10px;
+    }
+    #check{
+        display: none;
+    }
+    .checkbox{
+        display: block;
+        float: right;
+        margin-right: 15px;
+        margin-top: 12px;
+        color:#000000;
+    }
+    ul{
+        position: fixed;
+        width:100%;
+        height: auto;
+        background:#FFF8DC;
+        /* top: 80px; */
+        right: -100%;
+        text-align:center;
+        transition: all .5s;
+    }
+    nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height:30px;
+    }
+    nav ul li a{
+        font-size:50px;
+        color:#000000;
+    }
+    nav ul li.active{
+        background-color: aqua;
+        padding: 20px;
+        margin-top: 0;
+    }
+    a.active{
+        color:red;
+    }
+    #check:checked ~ ul{
+        top: 38px;
+        right: 0;
+    }
+
+
+    /* main */
+
+    main{
+        width:100%;
+        height: auto;
+    }
+    #main__bg img{
+        width:100%;
+        height: auto;
+    }
+    .main__info{
+        display:grid;
+        grid-template-columns: auto auto;
+        margin-top: -4px;
+    }
+    .main__info--item{
+        font-size: 3.5vw;
+        padding: 10px;
+    }
+    .main__info--item a img{
+        display: none;
+        /* width: 17%;
+        float: right; */
+    }
+    .main__info--item h2{
+        color: #ffffff;
+    }
+    .main__info--item p{
+        text-align: justify;
+        line-height:20px;
+        color:#ffffff;
+    }
+
+    /* main school */
+    .main__school{
+        height: auto;
+    }
+    .main__school--content{
+        padding: 15px;
+        line-height: 30px;
+        background-color: silver;
+    }
+    .main__school--content h4{
+        text-align: center;
+        color: #ffffff;
+        font-size: 7.5vw;
+    }
+    .main__school--content p{
+        text-align: justify;
+        color: #ffff;
+        line-height: 30px;
+        font-size: 5.5vw;
+        margin-bottom: 20px;
+    }
+    .main__school--img img{
+        width:100%;
+        height: auto;
+    }
+    .main__school--content a{
+        color: #ffff;
+        background-image: linear-gradient(to right,#ff8207, #ff314f);
+        padding: 13px;
+        font-size: 5vw;
+        margin-left:110px; 
+    }
+
+    /* swim lesson */
+    .main__lesson{
+        height: auto;
+        margin-top: -4px;
+    }
+    .main__lesson--content{
+        padding: 15px;
+        line-height: 30px;
+        background-color: silver;
+    }
+    .main__lesson--content h4{
+        text-align: center;
+        color: #ffffff;
+        font-size: 7.5vw;
+    }
+    .main__lesson--content p{
+        text-align: justify;
+        color: #ffff;
+        line-height: 30px;
+        font-size: 5.5vw;
+        margin-bottom: 20px;
+    }
+    .main__lesson--img img{
+        width:100%;
+        height: auto;
+    }
+    .main__lesson--content a{
+        color: #ffff;
+        background-image: linear-gradient(to right,#ff8207, #ff314f);
+        padding: 13px;
+        font-size: 5vw;
+        margin-left:110px; 
+    }
+
+    /* Main rate */
+    .main__rate{
+        height: auto;
+        margin-top: -4px;
+    }
+    .main__rate--content{
+        background-image: linear-gradient(#e8314f, #df147e);
+        opacity: 0.7;
+        text-align: justify;
+        color: #ffffffff;
+        font-weight: bold;
+        font-size: 4vw;
+        padding:16px;
+        line-height:35px;
+    }
+    .main__rate--content a{
+        background-color: #ffffff;
+        color: #000;
+        padding: 5px;
+        font-size: 4vw;
+        position: relative;
+        top: 7px;
+        left: 0;
+    }
+    /* our events */
+
+
+    .main__ourEvents{
+        height: auto;
+    }
+    .main__ourEvents--content{
+        background-image: linear-gradient(#ffb716,#ff8101);
+        
+    }
+    .main__ourEvents--content h3{
+        color: #ffff;
+        font-size: 7.5vw;
+        text-align: center;
+    }
+    .main__ourEvents ol li span{
+        position: relative;
+        top: -20px;
+        font-size: 4.5vw;
+        color: #ffffff;
+    }
+    .main__ourEvents--img img{
+        width:100%;
+        height: auto;
+    }
+
+    /* review school  */
+    .main__review{
+        height: auto;
+        display:grid;
+        grid-template-columns: auto auto;
+    }
+    .main__review--item img{
+        width:100%;
+        height: auto;
+        opacity: 0.8;
+    }
+    .review__item--content{
+        background-color: #f3f3f3;
+        padding: 40px 10px 20px 10px;
+        margin-top: -38px;
+        margin-right: 5px;
+        font-size:3.5vw ;
+        text-align: justify;
+        line-height:25px;
+    }
+    .review__item--content span{
+        margin-top: 20px;
+        color:#fc9266;
+    }
+    /* .main__review--item p{
+        text-align: justify;
+        font-size: 3.5vw;
+        padding-right: 10px;
+    } */
+
+    /* contact info */
+    .main__contact--content{
+        background-image: linear-gradient(#0089d3,#007fc9);
+        padding: 15px;
+        text-align: justify;
+        font-size: 4.5vw;
+        color: #fff;
+        line-height:30px;
+    }
+    .main__contact--content span{
+        position: relative;
+        top: -11px;
+        font-size: 10vw;
+    }
+
+    /* map */
+    .main__map img{
+        width:100%;
+        height: 100%;
+    }
+
+    /* footer */
+    footer p{
+        text-align: center;
+        padding: 11px;
+        font-size: 4vw;
+    }
+
+}
+
+/* smart tablet */
+@media screen and (min-width: 480px){
+    #nav__img{
+        float: left;
+    }
+    nav ul{
+       position: revert;
+       background-color: #ffffff;
+    }
+   
+    nav ul li {
+       display: inline-block;
+       line-height:25px;
+       margin: 0 5px;
+    }
+    nav ul li a {
+        font-size: 3vw;
+        font-weight:bold;
+    }
+    nav ul li.active{
+        background-image:linear-gradient(#a75cf9,#255ed6);
+    }
+    nav ul li.active a{
+        color: #ffffff;
+    }
+    .checkbox{
+        display: none;
+    }
+
+
+    /* four information */
+    .main__info{
+        grid-template-columns: auto auto auto auto;
+        margin-top: -75px;
+    }
+    .main__info--item{
+        padding: 10px;
+        margin-right: 20px;
+        margin-left: 20px;
+        font-size: 2.5vw;
+    }
+    .main__info--item h2{
+        font-size:3vw;
+        padding-bottom: 20px;
+    }
+    .main__info--item p {
+        line-height: 25px;
+        font-size:2.5vw;
+    }
+
+    /* school introduction */
+    .main__school{
+        display: flex;
+        flex-direction: row;
+        padding:22px;
+    }
+    .main__school--content{
+        width: 94%;
+        margin-right: 15px;
+        background-color: #f7f7f7;
+    }
+    .main__school--content p {
+        line-height: 32px;
+        font-size: 2vw;
+        color: #aaaaaa;
+    }
+    .main__school--content h4{
+        font-size: 4.5vw;
+        color:#000000;
+    }
+    .main__school--content a {
+        font-size: 3vw;
+        margin-left: 0px;
+    }
+    /* swim lesson */
+    .main__lesson{
+        display: flex;
+        flex-direction: row-reverse;
+        padding:22px;
+    }
+    .main__lesson--content{
+        margin-left: 15px;
+        background-color: #f7f7f7;
+        width: 79%;
+    }
+    .main__lesson--content p {
+        line-height: 27px;
+        font-size: 1.5vw;
+        color: #aaaaaa;
+    }
+    .main__lesson--content h4{
+        font-size: 4.5vw;
+        color:#000000;
+    }
+    .main__lesson--content a {
+        font-size: 3vw;
+        float: right;
+    }
+
+    /* Swimming Rate */
+    .main__rate{
+        background-image: url("../img/man.jpg");
+        background-repeat: no-repeat;
+        background-size:cover;
+    
+    }
+    .main__rate--content{
+        width: 45%;
+        margin-left: 33px;
+        opacity: 0.9;
+    }
+    .main__rate--content h2{
+        font-size: 4.5vw;
+    }
+    .main__rate--content p{
+        font-size: 2vw;
+        line-height: 34px;
+    }
+    .main__rate--content a{
+        padding: 12px;
+        font-size: 3vw;
+    }
+
+    /* <!-- Our Event --> */
+    .main__ourEvents{
+        display: flex;
+        flex-direction: row;
+        padding:22px;
+    }
+    .main__ourEvents--content{
+        flex-grow: 1;
+        margin-right: 11px;
+        padding:13px;
+    }
+    .main__ourEvents--content h3{
+        font-size:3vw;
+    }
+    .main__ourEvents--content img{
+        width:10%;
+    }
+    .main__ourEvents--content ol li span{
+        font-size:19px;
+        position: relative;
+        top: -10px;
+    }
+    
+    .main__ourEvents--img img{
+        width:100%;
+    }
+
+    /*  review school */
+    .review__item--content{
+        font-size: 5vw;
+        line-height: 62px;
+    }
+
+    /* contact info */
+    .main__contact{
+        margin-top:30px;
+        padding: 0 22px;
+        display:flex;
+        
+    }
+    .main__contact--content{
+        margin-right: 10px;
+        font-size:4vw;
+        line-height:45px;
+    }
+    .main__contact--content span {
+        font-size:5vw;
+    }
+    footer{
+        margin-top:20px;
+    }
+}
+/* ipad vertical */
+@media screen and (min-width:1024px){
+    nav ul li:hover{
+        background-image:linear-gradient(#a75cf9,#255ed6);
+        padding:20px;
+        
+    }
+    nav ul li a:hover{
+        color:#ffffff;
+    }
+    .main__info{
+        padding: 0 30px;
+    }
+    .main__info--item {
+        width:95%;
+        height: 430px;
+        padding: 0 30px;
+    }
+    #title1{
+        color: #ffff;
+        font-size: 38px;
+        padding: 10px 0;
+    }
+    #content1{
+        font-size: 27px;
+        line-height:40px;
+        text-align: justify;
+        color: #fff;
+    }
+    .main__info--item a{
+        float: right;
+    }
+    .main__info--item a img{
+        display: inline;
+
+    }
+    #ref{
+        position: relative;
+        top: -42px;
+    }
+    #ref2{
+        position: relative;
+        top: -90px;
+    }
+
+    /* school introduction   */
+    .main__school--content{
+        width:59%;
+    }
+    .main__school--content h4{
+        padding: 55px 10px
+    }
+    .main__school--content p{
+        padding: 10px 20px;
+        color: #000000;
+    }
+    .main__school--content a{
+        font-size: 3vw;
+        position: relative;
+        top: 22px;
+        left: 20px;
+    }
+    .main__school--img img{
+        width: 100%;
+    }
+    /* swim lesson */
+    .main__lesson--content{
+        width: 48%;
+    }
+    .main__lesson--content h4{
+        line-height:50px;
+        padding: 55px 10px
+    }
+    .main__lesson--content p{
+        padding: 10px 20px;
+        color: #000000;
+    }
+    /* Swimming Rate */
+    .main__rate{
+        background-image: url("../img/man.jpg");
+        background-repeat: no-repeat;
+        background-size:cover;
+    }
+    .main__rate--content {
+        height: 94vh;
+        padding:90px;
+        margin-left: 88px;
+    }
+    .main__rate--content h2{
+        font-size: 30px;
+        line-height: 36px;
+        padding-bottom: 20px;
+    }
+    .main__rate--content p{
+        font-size:24px;
+        padding-bottom: 25px;
+    }
+
+    /* Our Event */
+    .main__ourEvents--content{
+        width:59%;
+    }
+    .main__ourEvents--content h3{
+        text-align: left;
+        padding-bottom: 25px;
+    }
+    .main__ourEvents--content ol li span {
+        top:-25px;
+    }
+    .main__ourEvents--img img{
+        width: 102%;
+    }
+
+
+    /* review school */
+    .main__review {
+        grid-template-columns: auto auto auto auto;
+    }
+    .main__review--item{
+        width: 90%;
+        margin-left: 29px;
+    }
+    .main__review--item img {
+        width: 90%; 
+    }
+    .review__item--content {
+        width: 90%;
+        font-size: 23px;
+        line-height: 34px;
+    }
+    /* contact info */
+    .main__contact--content {
+        width: 56%;
+    }
+    .main__contact--content {
+        font-size: 3vw;
+        line-height: 75px;
+    }
+    .main__contact--content span {
+        font-size: 3vw;
+    }
+    footer p {
+        text-align: center;
+        padding: 7px;
+        font-size: 2vw;
+    }
+}

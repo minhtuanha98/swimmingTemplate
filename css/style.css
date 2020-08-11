@@ -1,9 +1,14 @@
+@font-face{
+    src: url("../font/MyriadProBoldSemiExtended.ttf");
+    font-family: "MyriadPro";
+}
 *{
     padding: 0;
     margin: 0;
     text-decoration: none;
     list-style: none;
     box-sizing: border-box;
+    font-family: "MyriadPros";
 }
 
 /* smart phone */
@@ -11,10 +16,12 @@
     header{
         background-color:#ffffff;
     }
-    nav img{
-        max-width: 30%;
+    header img{
+        width: 30%;
         height: auto;
-        padding: 10px;
+        position: relative;
+        top: 18px;
+        left: 15px;
     }
     #check{
         display: none;
@@ -45,14 +52,19 @@
         font-size:50px;
         color:#000000;
     }
-    nav ul li.active{
+    nav i{
+        position: relative;
+        top: -20px;
+        left: 0px;
+    }
+    /* nav ul li.active{
         background-color: aqua;
         padding: 20px;
         margin-top: 0;
-    }
-    a.active{
+    } */
+    /* a.active{
         color:red;
-    }
+    } */
     #check:checked ~ ul{
         top: 38px;
         right: 0;
@@ -87,9 +99,11 @@
         color: #ffffff;
     }
     .main__info--item p{
-        text-align: justify;
         line-height:20px;
         color:#ffffff;
+    }
+    .item__content .item__content--title p{
+        font-weight:bold;
     }
 
     /* main school */
@@ -213,26 +227,31 @@
     .main__review{
         height: auto;
         display:grid;
-        grid-template-columns: auto auto;
+        /* grid-template-columns: auto auto; */
     }
-    .main__review--item img{
-        width:100%;
+    .main__review--item{
+        margin:28px 0;
+    }
+    .main__review--item img {
+        width: 50%;
         height: auto;
+        margin-left: 91px;
         opacity: 0.8;
     }
     .review__item--content{
         background-color: #f3f3f3;
-        padding: 40px 10px 20px 10px;
+        padding: 40px 15px 20px 15px;
         margin-top: -38px;
-        margin-right: 5px;
-        font-size:3.5vw ;
+        height: 207px;
+        font-size: 5.5vw;
         text-align: justify;
-        line-height:25px;
+        line-height: 28px
     }
     .review__item--content span{
         margin-top: 20px;
         color:#fc9266;
     }
+    
     /* .main__review--item p{
         text-align: justify;
         font-size: 3.5vw;
@@ -271,8 +290,17 @@
 
 /* smart tablet */
 @media screen and (min-width: 480px){
+    header{
+        height: 75px;
+    }
     #nav__img{
         float: left;
+    }
+    nav{
+        float: right;
+        position: relative;
+        top: 25px;
+        right: 30px;
     }
     nav ul{
        position: revert;
@@ -288,36 +316,35 @@
         font-size: 3vw;
         font-weight:bold;
     }
-    nav ul li.active{
-        background-image:linear-gradient(#a75cf9,#255ed6);
-    }
-    nav ul li.active a{
-        color: #ffffff;
-    }
     .checkbox{
         display: none;
     }
+    /* nav ul li a.active{
+        background-image:linear-gradient(#a75cf9,#255ed6);
+    } */
 
 
     /* four information */
     .main__info{
-        grid-template-columns: auto auto auto auto;
-        margin-top: -75px;
+        grid-template-columns: auto;
+        margin-top: 25px;
     }
-    .main__info--item{
-        padding: 10px;
-        margin-right: 20px;
-        margin-left: 20px;
-        font-size: 2.5vw;
+
+    .main__info--item {
+        margin: 25px 42px;
     }
-    .main__info--item h2{
-        font-size:3vw;
-        padding-bottom: 20px;
+    .item__content{
+        padding:30px;
     }
-    .main__info--item p {
-        line-height: 25px;
-        font-size:2.5vw;
+    .item__content--title p {
+        font-size: 5vw;
     }
+    .item__content--desc p{
+        font-size: 4.5vw;
+        line-height:45px;
+    }
+ 
+
 
     /* school introduction */
     .main__school{
@@ -326,9 +353,14 @@
         padding:22px;
     }
     .main__school--content{
-        width: 94%;
-        margin-right: 15px;
+        width: 84%;
+        margin-right: 14px;
+        margin-left: 20px;
         background-color: #f7f7f7;
+    }
+    .main__school--img img {
+        width: 94%;
+        height: auto;
     }
     .main__school--content p {
         line-height: 32px;
@@ -351,8 +383,13 @@
     }
     .main__lesson--content{
         margin-left: 15px;
+        margin-right: 20px;
         background-color: #f7f7f7;
-        width: 79%;
+        width: 80%;
+    }
+    .main__lesson--img img {
+        width: 93%;
+        margin-left: 20px;
     }
     .main__lesson--content p {
         line-height: 27px;
@@ -376,8 +413,8 @@
     
     }
     .main__rate--content{
-        width: 45%;
-        margin-left: 33px;
+        width: 44.5%;
+        margin-left: 40px;
         opacity: 0.9;
     }
     .main__rate--content h2{
@@ -399,9 +436,11 @@
         padding:22px;
     }
     .main__ourEvents--content{
+        width: 86%;
         flex-grow: 1;
-        margin-right: 11px;
-        padding:13px;
+        margin-right: 16px;
+        margin-left: 16px;
+        padding: 13px;
     }
     .main__ourEvents--content h3{
         font-size:3vw;
@@ -416,19 +455,29 @@
     }
     
     .main__ourEvents--img img{
-        width:100%;
+        width: 96%;
+        height: 334Px;
     }
 
     /*  review school */
     .review__item--content{
-        font-size: 5vw;
-        line-height: 62px;
+        font-size: 4vw;
+        line-height: 58px;
+        padding: 30px;
+        height: 313px;
+        margin: 0 40px;
+        margin-top: -45px;
     }
+    .main__review--item img {
+        width: 40%;
+        margin-left: 233px;
+    }
+
 
     /* contact info */
     .main__contact{
         margin-top:30px;
-        padding: 0 22px;
+        padding: 0 41px;
         display:flex;
         
     }
@@ -446,55 +495,90 @@
 }
 /* ipad vertical */
 @media screen and (min-width:1024px){
-    nav ul li:hover{
-        background-image:linear-gradient(#a75cf9,#255ed6);
-        padding:20px;
-        
+    header{
+        height: 100px;
+    }
+    header img{
+        top: -1px;
+    }
+    #nav__img{
+        padding: 24px;
+        width:24%;
+    }
+    nav{
+        float:right;
+        margin-right:30px;
+        top: -5px;
+    }
+    nav ul li {
+        margin: 30px 5px;
+        padding-top:5px;
+    }
+    nav ul li a{
+        padding: 40px 12px;
     }
     nav ul li a:hover{
+        background-image:linear-gradient(#a75cf9,#255ed6);
+        cursor: pointer;
         color:#ffffff;
     }
+    nav ul li a {
+        font-size:32px;
+    }
+    /* four information */
     .main__info{
-        padding: 0 30px;
+        display: -webkit-flex; /* Safari */
+        -webkit-flex-wrap: wrap; /* Safari */
+        -webkit-flex-direction: row-reverse; /* Safari */
+        display: flex;
+        flex-direction:row;
+        flex-wrap: nowrap;
+        height: 350px;
+        padding: 0 45px;
+        margin-top: -90px;
+       
     }
-    .main__info--item {
-        width:95%;
-        height: 430px;
-        padding: 0 30px;
+    .main__info--item{
+        position: relative;
+        top: 0;
+        left: 0;
+        width:100%;
+        margin: 0 10px;
     }
-    #title1{
-        color: #ffff;
-        font-size: 38px;
-        padding: 10px 0;
+    .item__content{
+        padding:0 30px;
     }
-    #content1{
-        font-size: 27px;
-        line-height:40px;
-        text-align: justify;
-        color: #fff;
+    .item__content--title p{
+        font-size:3vw;
+        line-height: 37px;
     }
-    .main__info--item a{
-        float: right;
+    .item__content--desc p{
+        font-size: 2vw;
+        line-height: 25px;
+        text-align: left;
+    }
+    .item__content--more{
+        position: absolute;
+        top: 280px;
+        left: 224px;
     }
     .main__info--item a img{
         display: inline;
+        width: 100%;
+        height: auto;
+    }
 
-    }
-    #ref{
-        position: relative;
-        top: -42px;
-    }
-    #ref2{
-        position: relative;
-        top: -90px;
-    }
+
+    
 
     /* school introduction   */
     .main__school--content{
-        width:59%;
+        width: 50%;
+        margin-left: 32px;
     }
     .main__school--content h4{
-        padding: 55px 10px
+        padding: 55px 10px;
+        font-size:4vw;
     }
     .main__school--content p{
         padding: 10px 20px;
@@ -507,19 +591,36 @@
         left: 20px;
     }
     .main__school--img img{
-        width: 100%;
+        width: 93%;
+        margin-left: 9px;
     }
     /* swim lesson */
     .main__lesson--content{
-        width: 48%;
+        margin-right: 33px;
+        width: 52%;
+        height: 475px;
+        padding: 73px 18px
+        }
+    .main__lesson--img img {
+        height: 473px;
+        width: 94.5%;
+        margin-left: 30px;
     }
     .main__lesson--content h4{
-        line-height:50px;
-        padding: 55px 10px
+        line-height: 3vw;
+        font-size: 40px;
+        width: 63%;
+        margin-left: 20px;
+        margin-bottom: 10px;
+        text-align:justify;
     }
     .main__lesson--content p{
         padding: 10px 20px;
         color: #000000;
+    }
+    .main__lesson--content a{
+        float: left;
+        margin-left:20px;
     }
     /* Swimming Rate */
     .main__rate{
@@ -528,9 +629,10 @@
         background-size:cover;
     }
     .main__rate--content {
+        width:45.5%;
         height: 94vh;
         padding:90px;
-        margin-left: 88px;
+        margin-left: 49px;
     }
     .main__rate--content h2{
         font-size: 30px;
@@ -544,50 +646,153 @@
 
     /* Our Event */
     .main__ourEvents--content{
-        width:59%;
+        margin-left: 26px;
+        width: 54.4%;
+        height: 416px;
+        margin-bottom: 30px;
     }
     .main__ourEvents--content h3{
         text-align: left;
         padding-bottom: 25px;
     }
     .main__ourEvents--content ol li span {
-        top:-25px;
+        top:-26px;
+    }
+    .main__ourEvents--img{
+        margin-right: 14px;
+        margin-left: 5px;
     }
     .main__ourEvents--img img{
-        width: 102%;
+        width: 96%;
+        height: 416px;
+        margin-right: 20px;
     }
 
 
     /* review school */
     .main__review {
-        grid-template-columns: auto auto auto auto;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        height: 350px;
+        padding: 0 45px;
+        margin-top: -9;
+        margin-bottom:190px;
     }
     .main__review--item{
-        width: 90%;
-        margin-left: 29px;
+        width: 100%;
+        margin: 0 10px;
+    }
+    .review__item--content{
+        margin:0;
     }
     .main__review--item img {
-        width: 90%; 
+        width: 80%; 
+        height: auto;
+        margin-left: 29px;
+        margin-bottom:-37px;
     }
-    .review__item--content {
+    .review__item--content p {
         width: 90%;
-        font-size: 23px;
-        line-height: 34px;
+        font-size: 18px;
+        line-height: 25px;
+    }
+    .review__item--content span {
+        font-size: 18px;
     }
     /* contact info */
     .main__contact--content {
         width: 56%;
     }
     .main__contact--content {
+        width: 53.5%;
         font-size: 3vw;
-        line-height: 75px;
+        line-height: 57px;
+        margin-left: 16px;
+        margin-right: 17px;
     }
     .main__contact--content span {
         font-size: 3vw;
+    }
+    .main__map img {
+        width: 98%;
+        height: 100%;
     }
     footer p {
         text-align: center;
         padding: 7px;
         font-size: 2vw;
+    }
+}
+
+@media screen and (min-width:1440px){
+    .item__content--title p {
+        font-size: 3.5vw;
+        line-height: 43px;
+    }
+    .item__content--more {
+        position: absolute;
+        top: 281px;
+        left: 270px;
+    }
+    /* school introduction */
+    .main__school--content {
+        width: 47%;
+    }
+    .main__school--content p {
+        line-height: 49px;
+    }
+    .main__school--img img {
+        width: 99%;
+    }
+    /* swim lesson  */
+    .main__lesson--content {
+        margin-right: 33px;
+        width: 46.6%;
+        height: 474px;
+        padding: 73px 25px;
+    }
+    .main__lesson--content h4 {
+        font-size: 40px;
+        width: 54%;
+        margin-left: 20px;
+        text-align: left;
+    }
+    .main__lesson--content p {
+        line-height: 39px;
+        font-size: 2vw;
+    }
+    /* swimming rate */
+    .main__rate--content {
+        width: 45%;
+        height: 94vh;
+        padding: 90px;
+        margin-left: 67px;
+    }
+
+    /* our Event */
+    .main__ourEvents--content {
+        margin-left: 40px;
+        width: 47.4%;
+        height: 457px;
+        margin-bottom: 30px;
+    }
+    .main__ourEvents--img img {
+        height: 456px;
+    }
+
+    /* review school */
+    .main__review {
+        margin-bottom: 230px;
+    }
+
+    /* contact info */
+    .main__contact--content {
+        width: 48.5%;
+        padding: 50px;
+    }
+    .main__map img {
+        width: 100%;
+        height: 100%;
     }
 }
